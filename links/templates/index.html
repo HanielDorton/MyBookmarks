@@ -1,0 +1,27 @@
+<html>
+<head>
+<title>Daniel's Bookmarks</title>
+<h1>These are my bookmarks</h1>
+</head>
+<body>
+	{% block before_links %}
+	<h3> Viewing all Bookmarks</h3>
+	{% endblock %}
+	<ul>
+	{% for link in links %}
+		<li>
+			<b><a href="/view/{{link.pk}}/up/">{{link.title}} </a></b> , {{link.views}} Views
+			<br />
+			Date Created: {{link.created_on}} | Last Accessed: {{link.last_accessed}}
+			<p>
+		</li>
+	{% endfor %}
+	</ul>
+	<p>
+	<p>
+	Categories: 
+	{% for category in categories %}
+	<a href = "/category/{{category.name}}">{{category.name}}</a>
+	{% endfor %}
+</body>
+</html>
