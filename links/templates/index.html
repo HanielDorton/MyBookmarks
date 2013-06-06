@@ -1,18 +1,29 @@
 <html>
 <head>
 <title>Daniel's Bookmarks</title>
-<h1>These are my bookmarks</h1>
+<h1><a href = "/">Daniel's Bookmarks</a></h1>
 </head>
 <body>
 	{% block before_links %}
-	<h3> Viewing all Bookmarks</h3>
+	<h3>Current Bookmarks</h3>
 	{% endblock %}
 	<ul>
 	{% for link in links %}
 		<li>
-			<b><a href="/view/{{link.pk}}/up/">{{link.title}} </a></b> , {{link.views}} Views
+			<b><a href="/view/{{link.pk}}/up/">{{link.title}} </a></b> , {{link.views}} 
+			<a href = "/current/{{link.pk}}">
+			{% if link.current %}
+			<IMG SRC = "http://i446.photobucket.com/albums/qq189/neokalvinist/websitepics/True_zpsd0836aff.gif" width="15" height = "15" />
+			{% else %}
+			<IMG SRC = "http://i446.photobucket.com/albums/qq189/neokalvinist/websitepics/False_zps10cf50f5.gif" width="15" height = "15" />
+			{% endif %}
+			</a>
+			<font size = "1em">
 			<br />
-			Date Created: {{link.created_on}} | Last Accessed: {{link.last_accessed}}
+			Date Created: {{link.created_on}}
+			<br />
+			Last Accessed: {{link.last_accessed}}
+			</font>
 			<p>
 		</li>
 	{% endfor %}
@@ -25,3 +36,5 @@
 	{% endfor %}
 </body>
 </html>
+
+

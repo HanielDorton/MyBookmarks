@@ -9,6 +9,7 @@ urlpatterns = patterns('',
     (r'^home/$', 'links.views.index'),
     (r'^view/(\d+)/up/$', 'links.views.view', {'up': 1}),
     (r'^category/([A-Za-z]+)/$', 'links.views.category'),
+    (r'^current/(\d+)/', 'links.views.current'),
     # Examples:
     # url(r'^$', 'bookmarks.views.home', name='home'),
     # url(r'^bookmarks/', include('bookmarks.foo.urls')),

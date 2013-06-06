@@ -13,5 +13,6 @@ class Link(models.Model):
     last_accessed = models.DateTimeField(default=datetime.now())
     views = models.IntegerField(default=0)
     channels = models.ManyToManyField(Categories)
+    current = models.BooleanField(default=False)
     def __unicode__(self):
         return self.title
