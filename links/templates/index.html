@@ -9,6 +9,7 @@
 	{% block before_links %}
 	<h3>Current Bookmarks</h3>
 	{% endblock %}
+	<div class = "links">
 	<ul>
 	{% block content %}
 	{% for link in links %}
@@ -31,14 +32,25 @@
 		</li>
 	{% endfor %}
 	</ul>
-	<p>
-
-	<p>
-	Categories: 
-	{% for category in categories %}
-	<a href = "/category/{{category.name}}">{{category.name}}  </a>
-	{% endfor %}
-	{% endblock %}
+	
+	</div>
+	
+	<div class = "categories">
+	
+	<ul>
+		{% for category in categories %}
+		<li>
+		<a href = "/category/{{category.name}}">{{category.name}}  </a>
+		</li>
+		<br />
+		{% endfor %}
+		{% endblock %}
+	</ul>
+	</div>
+	
+	<div class = "footer">
+	Created by Daniel J. Horton
+	</div>
 </body>
 </html>
 
