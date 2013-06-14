@@ -1,6 +1,8 @@
 <html>
 <head>
 <title>Daniel's Bookmarks</title>
+{% load staticfiles %}
+<link rel="stylesheet" href={% static "bookmarks.css" %} />
 <h1><a href = "/">Daniel's Bookmarks</a></h1>
 </head>
 <body>
@@ -11,7 +13,7 @@
 	{% block content %}
 	{% for link in links %}
 		<li>
-			<b><a href="/view/{{link.pk}}/up/">{{link.title}} </a></b> , {{link.views}} 
+			<b><a href="/view/{{link.pk}}/up/" title = {{link.url}}>{{link.title}} </a></b> , {{link.views}} 
 			<a href = "/current/{{link.pk}}">
 			{% if link.current %}
 			<IMG SRC = "http://i446.photobucket.com/albums/qq189/neokalvinist/websitepics/True_zpsd0836aff.gif" width="15" height = "15" />
@@ -34,7 +36,7 @@
 	<p>
 	Categories: 
 	{% for category in categories %}
-	<a href = "/category/{{category.name}}">{{category.name}}</a>
+	<a href = "/category/{{category.name}}">{{category.name}}  </a>
 	{% endfor %}
 	{% endblock %}
 </body>
