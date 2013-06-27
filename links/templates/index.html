@@ -19,17 +19,17 @@
 			<b><a href="/view/{{link.pk}}/up/" title = {{link.url}}>{{link.title}} </a></b> , {{link.views}} 
 			<a href = "/current/{{link.pk}}">
 			{% if link.current %}
-			<IMG SRC = "http://i446.photobucket.com/albums/qq189/neokalvinist/websitepics/True_zpsd0836aff.gif" width="15" height = "15" />
+			<IMG SRC = "http://i446.photobucket.com/albums/qq189/neokalvinist/websitepics/True_zpsd0836aff.gif" alt = "current" width="15" height = "15" />
 			{% else %}
-			<IMG SRC = "http://i446.photobucket.com/albums/qq189/neokalvinist/websitepics/False_zps10cf50f5.gif" width="15" height = "15" />
+			<IMG SRC = "http://i446.photobucket.com/albums/qq189/neokalvinist/websitepics/False_zps10cf50f5.gif" alt = "not current" width="15" height = "15" />
 			{% endif %}
 			</a>
-			<font size = "1em">
+			<div class = "dateinfo">
 			<br />
 			Date Created: {{ link.created_on|date:"M d, Y"}}
 			<br />
 			Last Accessed: {{link.last_accessed|date:"M d, Y"}}
-			</font>
+			</div>
 			<p>
 		</li>
 	{% endfor %}
