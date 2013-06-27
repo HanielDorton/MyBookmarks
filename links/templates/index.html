@@ -5,9 +5,9 @@
 <title>Daniel's Bookmarks</title>
 {% load staticfiles %}
 <link rel="stylesheet" href={% static "bookmarks.css" %} />
-<h1><a href = "/">Daniel's Bookmarks</a></h1>
 </head>
 <body>
+<h1><a href = "/">Daniel's Bookmarks</a></h1>
 	{% block before_links %}
 	<h3>Current Bookmarks</h3>
 	{% endblock %}
@@ -44,7 +44,6 @@
 		<li>
 		<a href = "/category/{{category.name}}">{{category.name}}  </a>
 		</li>
-		<br />
 		{% endfor %}
 		{% endblock %}
 	</ul>

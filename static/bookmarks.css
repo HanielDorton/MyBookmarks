@@ -41,7 +41,7 @@ a:link {
 	text-decoration: none;
 }
 .dateinfo{
-	font size: 1em;
+	font-size: .5em;
 }
 a:visited {
 	color: black;
