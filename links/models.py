@@ -17,5 +17,6 @@ class Link(models.Model):
 	views = models.IntegerField(default=0)
 	channels = models.ManyToManyField(Categories)
 	current = models.BooleanField(default=False)
+	notes = models.TextField(default=" ")
 	def __unicode__(self):
 		return self.title
