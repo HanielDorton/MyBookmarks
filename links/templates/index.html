@@ -16,7 +16,7 @@
 	{% block content %}
 	{% for link in links %}
 		<li>
-			<b><a href="/view/{{link.pk}}/up/" title = {{link.url}}>{{link.title}} </a></b> , {{link.views}} 
+			<b><a href="/view/{{link.pk}}/up/" title = {{link.url}}>{{link.title}} </a></b>   {{link.views}} 
 			<a href = "/current/{{link.pk}}">
 			{% if link.current %}
 			<IMG SRC = "http://i446.photobucket.com/albums/qq189/neokalvinist/websitepics/True_zpsd0836aff.gif" alt = "current" width="15" height = "15" />
