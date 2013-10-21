@@ -34,6 +34,10 @@ ul{
 .categories ul{
 	padding-left: 0;
 }
+.categories ul li{
+	margin-top: 20px;
+	margin-bottom: 20px;
+}
 
 a:link {
 	color: black;

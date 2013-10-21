@@ -57,7 +57,7 @@ STATIC_ROOT = '/staticroot/'
 
 # URL prefix for static files.
 # Example: "http://example.com/static/", "http://static.example.com/"
-STATIC_URL = 'http://danielhorton.site11.com/static/'
+STATIC_URL =  'http://danielhorton.site11.com/static/'
 
 # Additional locations of static files
 STATICFILES_DIRS = (
