@@ -7,3 +7,4 @@ include
 *.pyc
 venv
 bookmarks/testsettings.py
+manage.py

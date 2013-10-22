@@ -26,7 +26,10 @@
 			</a>
 			<div class = "dateinfo">
 			<br />
-			{{link.notes}}
+			{% if link.notes %}
+			Notes: {{link.notes}}
+			<br />
+			{% endif %}
 			<br />
 			Date Created: {{ link.created_on|date:"M d, Y" }}
 			Last Accessed: {{link.last_accessed|date:"M d, Y" }}
