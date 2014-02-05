@@ -20,3 +20,6 @@ class Link(models.Model):
 	notes = models.TextField()
 	def __unicode__(self):
 		return self.title
+		
+	class Meta:
+		ordering = ['title']

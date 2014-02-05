@@ -8,7 +8,7 @@ urlpatterns = patterns('',
     (r'^$','links.views.index'),
     (r'^home/$', 'links.views.index'),
     (r'^view/(\d+)/up/$', 'links.views.view', {'up': 1}),
-    (r'^category/([A-Za-z]+)/$', 'links.views.category'),
+    (r'^category/([^/]+)/$', 'links.views.category'),
     (r'^current/(\d+)/$', 'links.views.current'),
     (r'^contact/$', 'links.views.contact'),
     (r'^contact/thanks/$', 'links.views.thanks'),
@@ -23,3 +23,7 @@ urlpatterns = patterns('',
     # Uncomment the next line to enable the admin:
      url(r'^admin/', include(admin.site.urls)),
 )
+
+
+
+#  (r'^category/([A-Za-z]+)/$', 'links.views.category'),
